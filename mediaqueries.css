@@ -44,9 +44,17 @@
     }
     .about-containers {
       margin-top: 0;
+      flex-wrap: wrap;
+      /* flex-direction: column; */
     }
+    
   }
   
+  @media screen and (max-width: 800px) {
+    .experience-details-container .about-containers{
+      flex-direction: column;
+    }
+  }
   @media screen and (max-width: 600px) {
     #contact,
     footer {
@@ -66,7 +74,10 @@
     .about-containers,
     .contact-info-upper-container,
     .btn-container {
-      flex-wrap: wrap;
+      flex-wrap: wrap;      
+    }
+    .experience-details-container .about-containers{
+      flex-direction: column;
     }
     .contact-info-container {
       margin: 0;
