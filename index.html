@@ -1,446 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anita's Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Anita</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anita Kapal is a Forward Deployed Engineer with 8+ years of experience turning ambiguous customer problems into reliable AI applications, APIs, and production systems.">
+  <meta name="theme-color" content="#003366">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anita Kapal | Forward Deployed Engineer">
+  <meta property="og:description" content="Customer discovery, full-stack delivery, applied AI, and production engineering.">
+  <meta property="og:url" content="https://portfolio-orcin-two-32.vercel.app/">
+  <meta property="og:image" content="https://portfolio-orcin-two-32.vercel.app/assets/profile-headshot.webp">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Anita Kapal | Forward Deployed Engineer">
+  <meta name="twitter:description" content="Customer discovery, full-stack delivery, applied AI, and production engineering.">
+  <title>Anita Kapal | Forward Deployed Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+  <nav id="desktop-nav" aria-label="Main navigation">
+    <a class="logo" href="#profile" aria-label="Anita Kapal, home">Anita Kapal<span>.</span></a>
+    <ul class="nav-links"><li><a href="#projects">AI Projects</a></li><li><a href="#approach">Approach</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li></ul>
+  </nav>
+  <nav id="hamburger-nav" aria-label="Mobile navigation">
+    <a class="logo" href="#profile" aria-label="Anita Kapal, home">Anita Kapal<span>.</span></a>
+    <div class="hamburger-menu"><button class="hamburger-icon" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMenu()"><span></span><span></span><span></span></button><ul class="menu-links" id="mobile-menu" aria-hidden="true" inert><li><a href="#projects" onclick="toggleMenu()">AI Projects</a></li><li><a href="#approach" onclick="toggleMenu()">Approach</a></li><li><a href="#experience" onclick="toggleMenu()">Experience</a></li><li><a href="#contact" onclick="toggleMenu()">Contact</a></li></ul></div>
+  </nav>
+
+  <main>
+    <section id="profile" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Forward Deployed Engineer · Applied AI builder</p>
+        <h1>From customer problem to <em>production system.</em></h1>
+        <p class="hero-subtitle">I combine 8+ years of backend and full-stack engineering with practical AI delivery—scoping ambiguous needs, integrating complex systems, and turning prototypes into dependable software.</p>
+        <div class="hero-proof" aria-label="Career highlights"><div><strong>8+</strong><span>Years shipping software</span></div><div><strong>3</strong><span>Applied AI systems</span></div><div><strong>2</strong><span>Early product users</span></div></div>
+        <div class="btn-container"><a class="btn btn-color-1" href="#projects">Explore case studies</a><a class="btn btn-color-2" href="./assets/resume.pdf" target="_blank" rel="noopener">View resume</a></div>
+        <div class="social-links"><a href="https://www.linkedin.com/in/anita-kapal-626203144/" target="_blank" rel="noopener" aria-label="Anita Kapal on LinkedIn (opens in a new tab)"><img src="./assets/linkedin.png" width="50" height="50" alt="">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/anitakapal25" target="_blank" rel="noopener" aria-label="Anita Kapal on GitHub (opens in a new tab)"><img src="./assets/github.png" width="512" height="512" alt="">GitHub <span aria-hidden="true">↗</span></a></div>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Anita Kapal</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/pic1.png" alt="Anita Kapal profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Anita Kapal</h1>
-        <p class="section__text__p2">Software Engineer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="window.open('https://www.linkedin.com/in/anita-kapal-626203144/','_blank')"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="window.open('https://github.com/anitakapal25','_blank')"
-          />
-        </div>
-      </div>
+      <aside class="field-panel" aria-label="My forward deployed engineering delivery process">
+        <div class="identity-row"><img src="./assets/profile-headshot.webp" width="640" height="640" alt="Anita Kapal" class="headshot"><div><strong>Anita Kapal</strong><span>Builder at the customer–code boundary</span><span class="availability"><i></i> Open to FDE roles</span></div></div>
+        <p class="panel-label">How I move work forward</p>
+        <ol class="delivery-flow"><li><span>01</span><div><strong>Discover</strong><small>Clarify the workflow, constraint, and success signal.</small></div></li><li><span>02</span><div><strong>Prototype</strong><small>Build the smallest end-to-end path that tests the idea.</small></div></li><li><span>03</span><div><strong>Integrate</strong><small>Connect data, APIs, permissions, and existing systems.</small></div></li><li><span>04</span><div><strong>Productionize</strong><small>Add tests, observability, guardrails, and feedback loops.</small></div></li></ol>
+      </aside>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/p3.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>6+ years <br />Software Engineer</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc.(IT) Bachelors Degree<br />Masters in Computer Applications</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Passionate Software Engineer with 6+ years of experience, I have a strong background in designing, developing, and maintaining scalable, high-performance web applications. Strong expertise in database design, front-end development, and third-party API integration. Adept at optimizing performance and ensuring code quality. Excellent problem-solving abilities and a proactive team player committed to continuous learning and improvement.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#skills'"
-      />
-    </section>
-    <section id="skills">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Programming Languages
-            </h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PHP</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML5</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS3</h3>
-                  <p>Experienced</p>
-                </div>
-              </article> 
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Libraries and Frameworks
-            </h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Laravel</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>ReactJS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CodeIgniter</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Lumen</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>VueJS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">            
-            <div class="experience-container">
-              <span class="date">2022-Present</span>
-    					<h2>Software Engineer
-              </h2>
-    					<span class="position">Simplify Workforce </span>
-    					<p class="mt-4">At Simplify Workforce, I optimized task management and boosted system performance by 25% through implementing Laravel's Job queues. I also improved application performance by 10% by designing and optimizing SQL queries and database schemas. Additionally, I participated in code reviews and testing processes to enhance code quality and utilized Eloquent ORM for efficient database interactions.
-                </p>
-            </div>            
-          </div>
-          <div class="details-container">            
-            <div class="experience-container">
-              <span class="date">2020-2022</span>
-    					<h2>Product Engineer
-              </h2>
-    					<span class="position">Inscripts
-              </span>
-    					<p class="mt-4">Developed and tested real-time chat, voice, and video integration for CometChat's SDK platform, achieving a 30% reduction in critical bugs through test-driven development with PHPUnit. Created comprehensive API documentation using Swagger/OpenAPI, and collaborated with QA for functional testing and issue resolution prior to deployment.Tech stack included PHP,Lumen, React, Javascript and MySQL.
-              </p>
-            </div>            
-          </div>
-          <div class="details-container">            
-            <div class="experience-container">
-              <span class="date">2017-2019</span>
-    					<h2>Fullstack Engineer
-              </h2>
-    					<span class="position">Veefin Solutions
-              </span>
-    					<p class="mt-4">Worked on eStorifi (E-commerce), LEAF (loan module), and iSmartServ360 (service management solution), implementing RESTful APIs to enhance interactivity and user engagement. Designed and developed web applications using PHP, OOP, MVC frameworks (Laravel/CodeIgniter), and front-end technologies, while ensuring efficient, reusable code. Provided technical support and troubleshooting, improving performance by 10%.</p>
-            </div>            
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
+
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/netflix-project.png"
-                alt="Project 1"
-                class="project-img" 
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">NetflixGPT</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="window.open('https://github.com/anitakapal25/netflix-gpt', '_blank')"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="window.open('https://netflix-gpt-lilac.vercel.app/', '_blank')"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Shopper</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="window.open('https://github.com/anitakapal25/online-shopping', '_blank')"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="window.open('https://online-shopping-psi.vercel.app/', '_blank')"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">My Youtube</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="window.open('https://github.com/anitakapal25/my-youtube', '_blank')"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="window.open('https://my-youtube-iota.vercel.app/', '_blank')"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:anitakapal25@gmail.com">anitakapal25@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/anita-kapal-626203144/" target="_blank">LinkedIn</a></p>
-        </div>
+      <div class="section-heading split-heading"><div><p class="eyebrow">Selected work</p><h2>Applied AI case studies</h2></div><p>Three systems showing how I frame problems, make technical trade-offs, and build for reliable use.</p></div>
+      <div class="projects-grid">
+        <article class="project-card project-wide"><div class="project-visual finance-visual" aria-hidden="true"><div class="visual-top"><span></span><span></span><span></span></div><div class="finance-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="visual-chip">Deterministic calculations</div></div><div class="project-content"><div class="project-meta"><span>01 · Finance</span><span>Testing · 2 early users</span></div><h3>Artha Personal Finance Agent</h3><p class="project-summary">A personal-finance copilot that helps Indian users understand the financial evidence available to them without letting conversational output control the underlying calculations.</p><dl class="case-facts"><div><dt>Problem</dt><dd>Financial guidance must remain understandable and traceable.</dd></div><div><dt>Ownership</dt><dd>Designed and built the React, FastAPI, and PostgreSQL product end to end.</dd></div><div><dt>Key decision</dt><dd>Separated deterministic finance logic from conversational explanation.</dd></div><div><dt>Reliability</dt><dd>Grounded explanations in available evidence rather than unsupported recommendations.</dd></div></dl><div class="tech-list"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span></div><div class="project-links"><a href="https://private-cfo-free-demo.onrender.com/" target="_blank" rel="noopener" aria-label="Open the Artha live demo in a new tab">Live demo ↗</a><a href="https://github.com/anitakapal25/private-cfo" target="_blank" rel="noopener" aria-label="Open the Artha GitHub repository in a new tab">Source ↗</a></div></div></article>
+
+        <article class="project-card"><div class="project-visual review-visual" aria-hidden="true"><div class="code-row short"></div><div class="code-row"></div><div class="code-row medium"></div><div class="review-comment"><b>AI</b><span>Evidence anchored to line 42</span></div></div><div class="project-content"><div class="project-meta"><span>02 · Developer tooling</span><span>Repository</span></div><h3>AI PR Review Agent</h3><p class="project-summary">A GitHub-native review system that keeps findings tied to changed lines and leaves final judgment with a human reviewer.</p><dl class="case-facts"><div><dt>Current core</dt><dd>Deterministic checks run before any future model reviewer.</dd></div><div><dt>Safety</dt><dd>Validates evidence, routes uncertainty, and never changes repository code.</dd></div><div><dt>Delivery</dt><dd>Publishes deduplicated inline findings and one idempotent summary.</dd></div></dl><div class="tech-list"><span>Python</span><span>GitHub API</span><span>CI/CD</span><span>Human review</span></div><div class="project-links"><a href="https://github.com/anitakapal25/ai-pr-review-agent" target="_blank" rel="noopener" aria-label="Open the AI PR Review Agent GitHub repository in a new tab">Explore repository ↗</a></div></div></article>
+
+        <article class="project-card"><div class="project-visual memory-visual" aria-hidden="true"><div class="memory-node center">Context</div><div class="memory-node n1"></div><div class="memory-node n2"></div><div class="memory-node n3"></div><div class="memory-node n4"></div></div><div class="project-content"><div class="project-meta"><span>03 · AI infrastructure</span><span>Testing</span></div><h3>RecallGuard Conversational Memory</h3><p class="project-summary">A persistent memory service that retrieves and ranks relevant context for AI assistants while keeping users and stored memories isolated.</p><dl class="case-facts"><div><dt>Pipeline</dt><dd>Semantic storage, retrieval, ranking, context building, and reflection.</dd></div><div><dt>Reliability</dt><dd>Duplicate detection, confidence filtering, structured logging, and PyTest coverage.</dd></div><div><dt>Security</dt><dd>User isolation and API-level authentication.</dd></div></dl><div class="tech-list"><span>Python</span><span>Flask</span><span>ChromaDB</span><span>Embeddings</span></div><div class="project-links"><a href="https://github.com/anitakapal25/recallguard-conversational-memory" target="_blank" rel="noopener" aria-label="Open the RecallGuard GitHub repository in a new tab">Explore repository ↗</a></div></div></article>
       </div>
     </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2023 Anita Kapal. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+
+    <section id="approach"><div class="section-heading"><p class="eyebrow">Working style</p><h2>Clarity from discovery through adoption</h2><p>I work across the technical and product layers needed to keep delivery moving.</p></div><div class="value-grid"><article class="value-card"><span class="card-number">01</span><h3>Scope what matters</h3><p>Turn stakeholder goals and workflow constraints into a concrete first deployment and a clear success signal.</p></article><article class="value-card featured"><span class="card-number">02</span><h3>Build across boundaries</h3><p>Move between interfaces, APIs, data, AI behavior, and infrastructure to deliver a complete working path.</p></article><article class="value-card"><span class="card-number">03</span><h3>Learn from production</h3><p>Use tests, logs, guardrails, and user feedback to improve reliability and guide the next iteration.</p></article></div></section>
+
+    <section id="experience"><div class="section-heading"><p class="eyebrow">Experience</p><h2>Production engineering across domains</h2></div><div class="timeline"><article class="role current"><div class="role-date">Aug 2024 — Present</div><div class="role-copy"><p class="role-company">Zitro</p><h3>FullStack Developer</h3><p>Building event-driven application flows with RabbitMQ and applying hexagonal architecture to keep business logic independent from infrastructure.</p><div class="tech-list"><span>Symfony</span><span>Vue 3</span><span>PostgreSQL</span><span>RabbitMQ</span><span>Docker</span></div></div></article><article class="role"><div class="role-date">Jul 2022 — May 2024</div><div class="role-copy"><p class="role-company">Simplify Workforce</p><h3>Backend Engineer</h3><p>Delivered SaaS backend functionality, background processing with Laravel queues, SQL optimization, and stability fixes.</p></div></article><article class="role"><div class="role-date">Dec 2020 — May 2022</div><div class="role-copy"><p class="role-company">Inscripts · CometChat</p><h3>Backend Engineer</h3><p>Built APIs for real-time communication, expanded test coverage, and documented integrations with Swagger/OpenAPI.</p></div></article><article class="role"><div class="role-date">Sep 2017 — Dec 2020</div><div class="role-copy"><p class="role-company">Veefin Solutions</p><h3>FullStack Engineer</h3><p>Shipped REST APIs and web products across e-commerce, lending, and service-management domains.</p></div></article></div></section>
+
+    <section id="skills"><div class="section-heading compact-heading"><p class="eyebrow">Technical toolkit</p><h2>Capabilities for end-to-end delivery</h2></div><div class="skills-panel"><div><h3>Applied AI</h3><p>Semantic retrieval · Conversational memory · ChromaDB · Sentence Transformers · Evidence grounding</p></div><div><h3>Backend & integration</h3><p>Python · PHP · FastAPI · Flask · Symfony · Laravel · REST APIs · RabbitMQ</p></div><div><h3>Data & product UI</h3><p>PostgreSQL · MySQL · SQL optimization · JavaScript · TypeScript · React · Vue 3</p></div><div><h3>Delivery & diagnostics</h3><p>Docker · Git · PyTest · PHPUnit · OpenAPI · Structured logging · Authentication · Debugging</p></div></div></section>
+
+    <section id="contact"><div class="contact-card"><p class="eyebrow">Let’s solve something difficult</p><h2>Need an engineer who can connect customer context to production code?</h2><p>I’m exploring Forward Deployed Engineer opportunities focused on complex integrations and applied-AI delivery.</p><div class="btn-container"><a class="btn btn-color-1" href="mailto:anitakapal25@gmail.com">Start a conversation</a><a class="btn btn-color-2 light" href="./assets/resume.pdf" target="_blank" rel="noopener">View resume</a></div><div class="contact-details"><span>Bangalore, India</span><a href="mailto:anitakapal25@gmail.com">anitakapal25@gmail.com</a></div></div></section>
+  </main>
+  <footer><p>© <span id="year">2026</span> Anita Kapal</p><a href="#profile">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
 </html>

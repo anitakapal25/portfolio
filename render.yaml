@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: anita-kapal-portfolio
+    runtime: static
+    buildCommand: echo "No build required"
+    staticPublishPath: .
+    autoDeploy: true
